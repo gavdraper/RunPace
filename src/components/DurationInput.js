@@ -15,9 +15,9 @@ export default function DurationInput(props) {
     return (
         <div>
             Minutes<br />
-            <input type='number' onChange={updateMinute} value={minutes}></input><br />
+            <input type='number' className='form-control' onChange={updateMinute} value={minutes}></input><br />
             Seconds<br />
-            <input type='number' onChange={updateSecond} value={seconds}></input>
+            <input type='number' className='form-control' onChange={updateSecond} value={seconds}></input>
         </div>
     )
 }

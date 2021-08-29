@@ -16,11 +16,18 @@ export default function PaceConvertor() {
     return (
         <div>
             <h2> Convertor</h2>
-            <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} />
-            <select id='conversionSelector' onChange={handleUnitChange} value={conversionIndex}>
-                {conversions.map((c, index) => <option key={c.key} value={index}>{c.name}</option>)}
-            </select>
-            <ReadOnlyDuration Seconds={convertedSeconds} />
+            <form>
+                <div className="form-group">
+                    <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} />
+                </div>
+
+                <div className="form-group">
+                    <select id='conversionSelector' className='form-control' onChange={handleUnitChange} value={conversionIndex}>
+                        {conversions.map((c, index) => <option key={c.key} value={index}>{c.name}</option>)}
+                    </select>
+                </div>
+                <ReadOnlyDuration Seconds={convertedSeconds} />
+            </form>
         </div>
     )
 }
