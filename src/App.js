@@ -25,14 +25,14 @@ function App() {
                     to="/Pace"
                     activeClassName="active"
                     className="nav-link"
-                  >Pace</NavLink>
+                  >Pace Convertor</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
                     to="/Race"
                     activeClassName="active"
                     className="nav-link"
-                  >Race</NavLink>
+                  >Race Pace</NavLink>
                 </li>
               </ul>
             </div>
