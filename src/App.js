@@ -3,6 +3,7 @@ import PaceConvertor from './components/Pages/PaceConvertor'
 import RacePace from './components/Pages/RacePace'
 import {
   BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   NavLink
@@ -11,7 +12,7 @@ import {
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
@@ -50,7 +51,7 @@ function App() {
         </div>
       </div >
 
-    </Router >
+    </HashRouter >
   );
 }
 
