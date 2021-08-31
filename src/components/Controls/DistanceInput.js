@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import DurationInput from '../Controls/DurationInput'
 export default function DistanceInput(props) {
     let [distance, updateDistance] = useState(props.Distance);
     let [units, updateUnits] = useState(props.Units);
@@ -20,10 +20,22 @@ export default function DistanceInput(props) {
                 <input id="distanceInput" type='number' className='form-control' onChange={distanceChange} value={distance}></input>
             </div>
             <div className="form-group">
-                <label htmlFor="secondsInput">Unit Type</label>
+                <label htmlFor="secondsInput">Units</label>
                 <input id="unitInput" type='number' className='form-control' onChange={unitChange} value={distance}></input>
-
             </div>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                    Target Time
+                </div>
+                <div class="card-body">
+                    <DurationInput InputChanged={() => { }}></DurationInput>
+
+                </div>
+            </div>
+
         </div>
     )
 }
