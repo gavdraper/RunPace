@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 
 function App() {
@@ -20,31 +20,35 @@ function App() {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <Link to="/Pace" className="nav-link">Pace</Link>
+              <li className={"nav-item active"}>
+                <NavLink
+                  to="/"
+                  activeClassName="active"
+                  className="nav-link"
+                >Pace</NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/Race" className="nav-link">Race</Link>
+                <NavLink
+                  to="/Race"
+                  activeClassName="active"
+                  className="nav-link"
+                >Race</NavLink>
               </li>
+
             </ul>
           </div>
         </nav>
-
-
         <div className="App">
-
-
           <Switch>
-            <Route path="/Pace">
-              <PaceConvertor />
-            </Route>
             <Route path="/Race">
               <RacePace />
             </Route>
+            <Route path="/">
+              <PaceConvertor />
+            </Route>
           </Switch>
-
         </div>
-      </div>
+      </div >
     </Router >
   );
 }
