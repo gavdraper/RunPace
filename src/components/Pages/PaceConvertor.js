@@ -15,7 +15,7 @@ export default function PaceConvertor() {
 
     return (
         <div className='container'>
-            <h2> Convertor</h2>
+            <h2>Pace Convertor</h2>
             <form>
                 <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} />
                 <div className="form-group">
