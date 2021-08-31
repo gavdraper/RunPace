@@ -2,7 +2,6 @@ import './App.css';
 import PaceConvertor from './components/Pages/PaceConvertor'
 import RacePace from './components/Pages/RacePace'
 import {
-  BrowserRouter as Router,
   HashRouter,
   Switch,
   Route,
