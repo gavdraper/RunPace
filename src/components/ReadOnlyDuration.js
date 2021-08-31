@@ -11,5 +11,5 @@ export default function ReadOnlyduration(props) {
 
     useEffect(() => secondsToMinuteSecondString());
 
-    return <div>{result}</div>
+    return <div className="form-group">{result}</div>
 }

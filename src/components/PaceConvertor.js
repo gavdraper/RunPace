@@ -14,20 +14,18 @@ export default function PaceConvertor() {
     useEffect(calculateOutput)
 
     return (
-        <div>
+        <div className='container'>
             <h2> Convertor</h2>
             <form>
+                <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} />
                 <div className="form-group">
-                    <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} />
-                </div>
-
-                <div className="form-group">
+                    <label htmlFor="conversionSelector">Units</label>
                     <select id='conversionSelector' className='form-control' onChange={handleUnitChange} value={conversionIndex}>
                         {conversions.map((c, index) => <option key={c.key} value={index}>{c.name}</option>)}
                     </select>
                 </div>
                 <ReadOnlyDuration Seconds={convertedSeconds} />
             </form>
-        </div>
+        </div >
     )
 }

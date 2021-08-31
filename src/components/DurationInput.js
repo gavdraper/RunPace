@@ -14,10 +14,14 @@ export default function DurationInput(props) {
 
     return (
         <div>
-            Minutes<br />
-            <input type='number' className='form-control' onChange={updateMinute} value={minutes}></input><br />
-            Seconds<br />
-            <input type='number' className='form-control' onChange={updateSecond} value={seconds}></input>
+            <div className="form-group">
+                <label htmlFor="minutesInput">Minutes</label>
+                <input id="minutesInput" type='number' className='form-control' onChange={updateMinute} value={minutes}></input>
+            </div>
+            <div className="form-group">
+                <label htmlFor="secondsInput">Seconds</label>
+                <input id="secondsInput" type='number' className='form-control' onChange={updateSecond} value={seconds}></input>
+            </div>
         </div>
     )
 }
