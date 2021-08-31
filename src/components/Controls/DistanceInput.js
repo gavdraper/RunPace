@@ -9,7 +9,7 @@ export default function DistanceInput(props) {
     useEffect(() => {
         let distanceNumber = Number(distance);
         //TODO : Convert to KM from any other unit type
-        let km = Number(distance);
+        let km = Number(distanceNumber);
         props.DistanceChanged(km);
     }, [units, distance, props]);
 
@@ -21,6 +21,7 @@ export default function DistanceInput(props) {
             </div>
             <div className="form-group">
                 <label htmlFor="secondsInput">Unit Type</label>
+                <input id="unitInput" type='number' className='form-control' onChange={unitChange} value={distance}></input>
 
             </div>
         </div>
