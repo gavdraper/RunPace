@@ -43,7 +43,7 @@ function App() {
             <Route path="/Race">
               <RacePace />
             </Route>
-            <Route path="/Pace">
+            <Route path={["/Pace", "/"]}>
               <PaceConvertor />
             </Route>
           </Switch>
