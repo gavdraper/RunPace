@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-globals */
-
 // This service worker can be customized!
 // See https://developers.google.com/web/tools/workbox/modules
 // for the list of available Workbox modules, or add any other
@@ -28,6 +26,7 @@ const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
 registerRoute(
     // Return false to exempt requests from being fulfilled by index.html.
     ({ request, url }) => {
+        return false;
         // If this isn't a navigation, skip.
         if (request.mode !== 'navigate') {
             return false;
