@@ -1,6 +1,7 @@
 import './App.css';
 import PaceConvertor from './components/Pages/PaceConvertor'
 import RacePace from './components/Pages/RacePace'
+import PWA from './components/Pages/PWA'
 import {
   HashRouter,
   Switch,
@@ -34,12 +35,22 @@ function App() {
                     className="nav-link"
                   >Race Pace</NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/PWA"
+                    activeClassName="active"
+                    className="nav-link"
+                  >PWA</NavLink>
+                </li>
               </ul>
             </div>
           </div>
         </nav>
         <div className="App">
           <Switch>
+            <Route path="/PWA">
+              <PWA />
+            </Route>
             <Route path="/Race">
               <RacePace />
             </Route>
