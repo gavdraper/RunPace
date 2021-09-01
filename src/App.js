@@ -51,6 +51,7 @@ function App() {
             <Route path="/PWA">
               <PWA />
             </Route>
+
             <Route path="/Race">
               <RacePace />
             </Route>
