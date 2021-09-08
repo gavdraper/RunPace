@@ -36,13 +36,6 @@ function App() {
                     className="nav-link"
                   >Race Pace</NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/PWA"
-                    activeClassName="active"
-                    className="nav-link"
-                  >PWA</NavLink>
-                </li>
               </ul>
             </div>
           </div>
