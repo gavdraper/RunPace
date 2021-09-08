@@ -1,6 +1,7 @@
 import DistanceInput from '../Controls/DistanceInput'
 import DurationInput from '../Controls/DurationInput'
 import { useEffect, useState } from 'react'
+import ReadOnlyDuration from '../Controls/ReadOnlyDuration'
 
 
 export default function RacePace() {
@@ -16,19 +17,18 @@ export default function RacePace() {
             <h2>Race Pace</h2>
             <form className='paceForm'>
                 <DistanceInput Distance={10} DistanceChanged={setKm} />
-
-                <div class="card">
-                    <div class="card-header">
+                <div className="card">
+                    <div className="card-header">
                         Target Time
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
                         <DurationInput InputChanged={setSeconds} Minutes={8} Seconds={0} />
                     </div>
                 </div>
             </form>
 
             <div className="form-group">
-                <span className="result">{seconds / km}</span>
+                <ReadOnlyDuration Seconds={seconds / km} />
             </div>
         </div>
     )

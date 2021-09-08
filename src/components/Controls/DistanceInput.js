@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react"
 export default function DistanceInput(props) {
     let [distance, updateDistance] = useState(props.Distance);
-    let [units, updateUnits] = useState(props.Units);
+    let [units, updateUnits] = useState('KM');
     const distanceChange = (e) => updateDistance(e.target.value);
-    const unitChange = (e) => updateUnits(e.target.value);
+    const unitChange = (e) => {
+        updateUnits(e.target.value);
+    }
 
     useEffect(() => {
         let distanceNumber = Number(distance);
         let km = Number(distanceNumber);
+        //if (units !== 'KM')
+        //km = km * 1.60934;
         props.DistanceChanged(km);
     }, [units, distance, props]);
 
+
     let unitTypes = [
-        { name: 'KM', key: 0 },
-        { name: 'Mile', key: 1 }
+        { name: 'KM' },
+        { name: 'Mile' }
     ]
 
     return (
@@ -25,7 +30,7 @@ export default function DistanceInput(props) {
             <div className="form-group">
                 <label htmlFor="unitSelector">Units</label>
                 <select id='unitSelector' className='form-control' onChange={unitChange}>
-                    {unitTypes.map((c, index) => <option key={c.key} value={index}>{c.name}</option>)}
+                    {unitTypes.map((c, index) => <option key={c.name} value={c.name}>{c.name}</option>)}
                 </select>
             </div>
         </div>
