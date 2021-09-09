@@ -6,8 +6,6 @@ export default function DurationInput(props) {
     let [hours, updateHours] = useState(props.Hours || 0);
     let [showHours] = useState(props.ShowHours || false);
 
-    console.log(showHours);
-
     useEffect(() => {
         let secondsNumber = Number(seconds);
         let minutesNumber = Number(minutes);

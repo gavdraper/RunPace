@@ -24,7 +24,10 @@ export default function PaceConvertor() {
                         {conversions.map((c, index) => <option key={c.key} value={index}>{c.name}</option>)}
                     </select>
                 </div>
-                <ReadOnlyDuration Seconds={convertedSeconds} DestinationUnit={conversions[conversionIndex].destination} />
+                <ReadOnlyDuration
+                    Seconds={convertedSeconds}
+                    Suffix={'Per ' + conversions[conversionIndex].destination}
+                />
             </form>
         </div >
     )
