@@ -5,7 +5,6 @@ import ReadOnlyDuration from '../Controls/ReadOnlyDuration'
 
 
 export default function RacePace() {
-
     let [seconds, setSeconds] = useState('0');
     let [km, setKm] = useState('0');
     const calculateOutput = () => seconds;
@@ -22,7 +21,7 @@ export default function RacePace() {
                         Target Time
                     </div>
                     <div className="card-body">
-                        <DurationInput InputChanged={setSeconds} Minutes={8} Seconds={0} />
+                        <DurationInput InputChanged={setSeconds} Minutes={50} Seconds={0} ShowHours={true} />
                     </div>
                 </div>
             </form>
