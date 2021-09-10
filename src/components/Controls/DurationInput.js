@@ -14,23 +14,21 @@ export default function DurationInput(props) {
 
     return (
         <div>
-            {showHours &&
-                <div className="form-group">
-                    <label htmlFor="minutesInput">Hours</label>
-                    <input id="minutesInput" type='number' className='form-control'
+            <label htmlFor="minutesInput">Time HH:MM:SS</label>
+            <div className="input-group">
+                {showHours &&
+                    <input id="hoursInput" type='number' className='form-control'
                         onChange={e => updateHours(e.target.value)} value={hours}></input>
-                </div>
-            }
-            <div className="form-group">
-                <label htmlFor="minutesInput">Minutes</label>
+                }
+
+                {showHours && <span className="input-group-addon" style={{ width: '30px' }}>:</span>}
                 <input id="minutesInput" type='number' className='form-control'
                     onChange={e => updateMinutes(e.target.value)} value={minutes}></input>
-            </div>
-            <div className="form-group">
-                <label htmlFor="secondsInput">Seconds</label>
+                <span className="input-group-addon" style={{ width: '30px' }}>:</span>
                 <input id="secondsInput" type='number' className='form-control'
                     onChange={e => updateSeconds(e.target.value)} value={seconds}></input>
-            </div>
-        </div >
+            </div >
+        </div>
+
     )
 }

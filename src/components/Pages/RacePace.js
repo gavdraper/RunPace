@@ -23,7 +23,9 @@ export default function RacePace() {
                     <div className="card-header">
                         Required Pace
                     </div>
-                    <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={'Per ' + distance.Units} />
+                    <div className="card-body">
+                        <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={'Per ' + distance.Units} />
+                    </div>
                 </div>
             </form>
 
