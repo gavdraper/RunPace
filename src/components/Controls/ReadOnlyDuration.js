@@ -11,8 +11,16 @@ export default function ReadOnlyduration(props) {
 
     useEffect(() => secondsToMinuteSecondString());
 
-    return <div className="form-group"><span className="result">
-        {result + ' ' + props.Suffix}
-    </span>
-    </div>
+    return (
+        <div className="card">
+            <div className="card-header">
+                Pace
+            </div>
+            <div className="card-body">
+                <span className="result">
+                    {result + ' ' + props.Suffix}
+                </span>
+            </div>
+        </div>
+    )
 }

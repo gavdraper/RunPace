@@ -13,21 +13,25 @@ export default function DurationInput(props) {
     }, [seconds, minutes, hours, props]);
 
     return (
-        <div>
-            <label htmlFor="minutesInput">Time HH:MM:SS</label>
-            <div className="input-group">
-                {showHours &&
-                    <input id="hoursInput" type='number' className='form-control'
-                        onChange={e => updateHours(e.target.value)} value={hours}></input>
-                }
+        <div className="card">
+            <div className="card-header">
+                {showHours && 'Hours :'} Minutes : Seconds
+            </div>
+            <div className="card-body">
+                <div className="input-group">
+                    {showHours &&
+                        <input id="hoursInput" type='number' className='form-control'
+                            onChange={e => updateHours(e.target.value)} value={hours}></input>
+                    }
 
-                {showHours && <span className="input-group-addon" style={{ width: '30px' }}>:</span>}
-                <input id="minutesInput" type='number' className='form-control'
-                    onChange={e => updateMinutes(e.target.value)} value={minutes}></input>
-                <span className="input-group-addon" style={{ width: '30px' }}>:</span>
-                <input id="secondsInput" type='number' className='form-control'
-                    onChange={e => updateSeconds(e.target.value)} value={seconds}></input>
-            </div >
+                    {showHours && <span className="input-group-addon" style={{ width: '30px' }}>:</span>}
+                    <input id="minutesInput" type='number' className='form-control'
+                        onChange={e => updateMinutes(e.target.value)} value={minutes}></input>
+                    <span className="input-group-addon" style={{ width: '30px' }}>:</span>
+                    <input id="secondsInput" type='number' className='form-control'
+                        onChange={e => updateSeconds(e.target.value)} value={seconds}></input>
+                </div >
+            </div>
         </div>
 
     )

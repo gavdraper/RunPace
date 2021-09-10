@@ -5,31 +5,19 @@ import ReadOnlyDuration from '../Controls/ReadOnlyDuration'
 
 export default function RacePace() {
     let [seconds, setSeconds] = useState('0');
-    let [distance, setDistance] = useState({ KM: 11, Units: 'KM' });
+    let [distance, setDistance] = useState({ KM: 42, Units: 'KM' });
     return (
         <div className='container'>
             <h2>Race Pace</h2>
             <form className='paceForm'>
                 <DistanceInput Distance={distance} Changed={setDistance} />
-                <div className="card">
-                    <div className="card-header">
-                        Target Time
-                    </div>
-                    <div className="card-body">
-                        <DurationInput InputChanged={setSeconds} Minutes={50} Seconds={0} ShowHours={true} />
-                    </div>
-                </div>
-                <div className="card">
-                    <div className="card-header">
-                        Required Pace
-                    </div>
-                    <div className="card-body">
-                        <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={'Per ' + distance.Units} />
-                    </div>
-                </div>
-            </form>
+
+                <DurationInput InputChanged={setSeconds} Hours={4} Minutes={0} Seconds={0} ShowHours={true} />
+
+                <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={'Per ' + distance.Units} />
+            </form >
 
 
-        </div>
+        </div >
     )
 }
