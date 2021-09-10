@@ -25,7 +25,7 @@ export default function DistanceInput(props) {
             <div className="card-body">
                 <div className="input-group">
                     <input id="distanceInput" type='number' className='form-control' onChange={distanceChange} value={distance}></input>
-                    <span className="input-group-addon" style={{ width: '30px' }}>-</span>
+                    <span className="input-group-addon" style={{ width: '30px' }}> : </span>
                     <select style={{ maxWidth: "100px" }} id='unitSelector' className='form-control' onChange={unitChange}>
                         {unitTypes.map((c, index) => <option key={c.name} value={c.name}>{c.name}</option>)}
                     </select>

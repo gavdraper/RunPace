@@ -14,7 +14,7 @@ export default function RacePace() {
 
                 <DurationInput InputChanged={setSeconds} Hours={4} Minutes={0} Seconds={0} ShowHours={true} />
 
-                <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={'Per ' + distance.Units} />
+                <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={' /' + distance.Units} />
             </form >
 
 

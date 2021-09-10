@@ -32,7 +32,7 @@ export default function PaceConvertor() {
 
                 <ReadOnlyDuration
                     Seconds={convertedSeconds}
-                    Suffix={'Per ' + conversions[conversionIndex].destination}
+                    Suffix={' /' + conversions[conversionIndex].destination}
                 />
             </form>
         </div >
