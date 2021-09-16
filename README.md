@@ -1,3 +1,4 @@
+# Pace Calculator
 
 Little propject to calculate running race paces based on desired finish times and convert between different units.
 
