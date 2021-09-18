@@ -20,16 +20,14 @@ export default function DurationInput(props) {
             <div className="card-body">
                 <div className="input-group">
                     {showHours &&
-                        <input id="hoursInput" type='number' className='form-control'
-                            onChange={e => updateHours(e.target.value)} value={hours}></input>
+                        <>
+                            <input id="hoursInput" type='number' className='form-control' onChange={e => updateHours(e.target.value)} value={hours} />
+                            <span className="input-group-addon" style={{ width: '30px' }}>:</span>
+                        </>
                     }
-
-                    {showHours && <span className="input-group-addon" style={{ width: '30px' }}>:</span>}
-                    <input id="minutesInput" type='number' className='form-control'
-                        onChange={e => updateMinutes(e.target.value)} value={minutes}></input>
+                    <input id="minutesInput" type='number' className='form-control' onChange={e => updateMinutes(e.target.value)} value={minutes} />
                     <span className="input-group-addon" style={{ width: '30px' }}>:</span>
-                    <input id="secondsInput" type='number' className='form-control'
-                        onChange={e => updateSeconds(e.target.value)} value={seconds}></input>
+                    <input id="secondsInput" type='number' className='form-control' onChange={e => updateSeconds(e.target.value)} value={seconds} />
                 </div >
             </div>
         </div>
