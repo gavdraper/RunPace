@@ -17,9 +17,7 @@ export default function ReadOnlyduration(props) {
                 Pace
             </div>
             <div className="card-body">
-                <span className="result">
-                    {result + ' ' + props.Suffix}
-                </span>
+                <span className="result">{result + ' ' + props.Suffix}</span>
             </div>
         </div>
     )
