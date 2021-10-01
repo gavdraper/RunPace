@@ -1,10 +1,11 @@
 import './App.css';
-import { useState } from 'react'
+//import { useState } from 'react'
 import PaceConvertor from './components/Pages/PaceConvertor'
 import RacePace from './components/Pages/RacePace'
 import PWA from './components/Pages/PWA'
-import Login from './components/Controls/Security/Login'
-import Logout from './components/Controls/Security/Logout'
+import Fuel from './components/Pages/Fuel'
+// import Login from './components/Controls/Security/Login'
+// import Logout from './components/Controls/Security/Logout'
 import {
   HashRouter,
   Switch,
@@ -15,7 +16,7 @@ import {
 
 function App() {
 
-  let [userObj, setUserObj] = useState(null);
+  //let [userObj, setUserObj] = useState(null);
 
   return (
     <HashRouter>
@@ -23,8 +24,8 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             Pace Calculator
-            <Login User={userObj} UpdateUser={setUserObj} />
-            <Logout User={userObj} UpdateUser={setUserObj} />
+            {/* <Login User={userObj} UpdateUser={setUserObj} />
+            <Logout User={userObj} UpdateUser={setUserObj} /> */}
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -44,6 +45,13 @@ function App() {
                     className="nav-link"
                   >Race Pace</NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/Fuel"
+                    activeClassName="active"
+                    className="nav-link"
+                  >Fuel</NavLink>
+                </li>
               </ul>
             </div>
           </div>
@@ -56,6 +64,9 @@ function App() {
 
             <Route path="/Race">
               <RacePace />
+            </Route>
+            <Route path="/Fuel">
+              <Fuel />
             </Route>
             <Route path={["/Pace", "/"]}>
               <PaceConvertor />
