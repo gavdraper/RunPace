@@ -1,7 +1,7 @@
 import DistanceInput from '../Controls/DistanceInput'
 import DurationInput from '../Controls/DurationInput'
 import { useState } from 'react'
-import ReadOnlyDuration from '../Controls/ReadOnlyFuel'
+import ReadOnlyDuration from '../Controls/ReadOnlyDuration'
 
 export default function RacePace() {
     let [seconds, setSeconds] = useState('0');
