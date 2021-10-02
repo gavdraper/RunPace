@@ -7,7 +7,7 @@ export default function RacePace() {
     return (
         <div className='container'>
             <form className='paceForm'>
-                <DurationInput InputChanged={setSeconds} ShowSeconds={false} ShowHours={true} />
+                <DurationInput InputChanged={setSeconds} ShowHours={true} />
                 <ReadOnlyFuel Seconds={seconds}/>
             </form >
         </div >

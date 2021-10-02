@@ -17,7 +17,7 @@ export default function PaceConvertor() {
         <div className='container'>
             <h2>Convertor</h2>
             <form className="paceForm">
-                <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} />
+                <DurationInput InputChanged={durationChanged} Minutes={8} Seconds={0} ShowSeconds={true}/>
                 <div className='card'>
                     <div className='card-header'>Units</div>
                     <div className='card-body'>
@@ -28,7 +28,6 @@ export default function PaceConvertor() {
                         </div>
                     </div>
                 </div>
-
 
                 <ReadOnlyDuration
                     Seconds={convertedSeconds}
