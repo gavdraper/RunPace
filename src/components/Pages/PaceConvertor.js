@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import DurationInput from '../Controls/DurationInput'
-import ReadOnlyDuration from '../Controls/ReadOnlyDuration'
+import ReadOnlyDuration from '../Controls/ReadOnlyFuel'
 import conversions from '../../conversions'
 
 export default function PaceConvertor() {
