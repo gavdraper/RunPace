@@ -11,13 +11,9 @@ export default function RacePace() {
             <h2>Race Pace</h2>
             <form className='paceForm'>
                 <DistanceInput Distance={distance} Changed={setDistance} />
-
                 <DurationInput InputChanged={setSeconds} Hours={4} Minutes={0} Seconds={0} ShowHours={true} />
-
                 <ReadOnlyDuration Seconds={seconds / distance.KM} Suffix={' /' + distance.Units} />
             </form >
-
-
         </div >
     )
 }

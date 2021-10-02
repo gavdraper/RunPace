@@ -5,6 +5,7 @@ export default function DurationInput(props) {
     let [minutes, updateMinutes] = useState(props.Minutes);
     let [hours, updateHours] = useState(props.Hours || 0);
     let [showHours] = useState(props.ShowHours || false);
+    let [showSeconds] = useState(props.ShowSeconds || true);
 
     useEffect(() => {
         let secondsNumber = Number(seconds);
@@ -27,7 +28,11 @@ export default function DurationInput(props) {
                     }
                     <input id="minutesInput" type='number' className='form-control' onChange={e => updateMinutes(e.target.value)} value={minutes} />
                     <span className="input-group-addon" style={{ width: '30px' }}>:</span>
+                    { showSeconds &&
+                    <>
                     <input id="secondsInput" type='number' className='form-control' onChange={e => updateSeconds(e.target.value)} value={seconds} />
+                    </>
+}
                 </div >
             </div>
         </div>
