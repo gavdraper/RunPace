@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useEffect } from 'react';
 //import { useState } from 'react'
 import PaceConvertor from './components/Pages/PaceConvertor'
 import RacePace from './components/Pages/RacePace'
@@ -15,6 +16,10 @@ import {
 
 
 function App() {
+
+  useEffect(() => {
+    document.title = "New Page Title";
+  }, []);
 
   //let [userObj, setUserObj] = useState(null);
 
