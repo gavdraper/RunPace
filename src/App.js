@@ -18,7 +18,7 @@ import {
 function App() {
 
   useEffect(() => {
-    document.title = "New Page Title";
+    document.title = "Pace Calculator V2";
   }, []);
 
   //let [userObj, setUserObj] = useState(null);
