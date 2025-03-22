@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Adjust Git Config Permissions
+        run: sudo chown -R $USER:$USER .git
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
